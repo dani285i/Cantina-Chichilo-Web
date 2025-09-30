@@ -14,7 +14,7 @@
     </head>
     <body>
 
-    <!-- MENU DE NAVEGACIÓN -->
+    <!-- HEADER -->
     <header>
     <div class="logo-container">
         <a href="#"><img src="./IMG/logo-header.png" alt="Logo Cantina Chichilo" class="logo-header" /></a>
@@ -161,7 +161,9 @@
     </footer>
 
     <script>
-    // Script básico para los desplegables de la carta
+
+    // ------ Script básico para los desplegables de la carta ---------
+
     document.querySelectorAll('.desplegable-header').forEach(btn => {
         btn.addEventListener('click', () => {
         btn.classList.toggle('active');
@@ -170,31 +172,42 @@
         });
     });
 
-    let ubicacionAnterior = window.pageYOffset;  
-    let scrollThreshold = 1.5; // cantidad minima en pixeles para que vuelva a bajar el menu
-    
-    window.onscroll = function() {  
-        let header = document.getElementsById("header");
-        let ubicacionActual = window.pageYOffset;
-    
-        // si bajas scrolleas hacia abajo el menú sube para arriba y se oculta
-        if (ubicacionActual > ubicacionAnterior) {  
-            header.style.top = '-12vh';  
+    // ------- Script sacado de mi pagina de lexus para que el menu cambie de color dependiendo de su posicion en la web --------
+
+    let ubicacionAnterior = window.pageYOffset;
+    let scrollThreshold = 10; 
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => 
+    {
+        let ubicacionActual = window.pageYOffset;  
+
+        // Si scrolleas hacia abajo, el menu sube y ya no lo ves
+        if (ubicacionActual > ubicacionAnterior) 
+        {  
+            header.style.top = "-17vh";  
         } 
-        // si subes la cantidad de pixeles indicados mas arriba, el menu vuelve a bajar
-        else if (ubicacionAnterior - ubicacionActual > scrollThreshold) {  
-            header.style.top = '0';  
+        // Si subes, el menu vuelve a aparecer
+        else if (ubicacionAnterior - ubicacionActual > scrollThreshold) 
+        {  
+            header.style.top = "0";  
         }  
-    
-        // si el menu esta tocando el limite de la pagina, sera opaca, si no esta tocando el limite superior de la pagina el menu tendra un fondo grisaceo
-        if (ubicacionActual === 0) {
-            header.style.backgroundColor = 'rgba(253,253,253, 1)';
-        } else {
-            header.style.backgroundColor = 'rgba(43, 43, 43, 1)';
+
+        // Aqui es donde defines cada clase del css especializada dependiendo de la posicion del menu
+        if (ubicacionActual === 0) 
+        {
+            header.classList.add("header-on-top");
+            header.classList.remove("header-scrolled");
+
+        } else 
+        {
+            header.classList.add("header-scrolled");
+            header.classList.remove("header-on-top");
         }
+
         ubicacionAnterior = ubicacionActual;  
-    };
-    
+    });
+
     /*Javascript Realizado por Daniel Gómez Aradas*/
 
     </script>

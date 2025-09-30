@@ -13,26 +13,53 @@ body {
     color: var(--negro);
 }
 
-/* MENU DE NAVEGACION */
+/* HEADER */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(253,253,253, 0.95);
+    transition: top 0.3s, background-color 0.3s;
+    background-color: rgba(253,253,253, 0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1vh 5vh;
+    padding: 2vh 5vh;
     z-index: 1000;
     border-bottom: 1px solid var(--gris);
 }
+
+    /* Clases especiales para el script de despliegue del menú */
+
+    header.header-on-top {
+        background: rgba(75, 75, 75, 0.2);
+        border: none;
+    }
+
+        header.header-on-top nav ul a{
+            color: var(--blanco);
+        }
+
+        header.header-on-top nav ul a.active{
+            color: red;
+        }
+
+    /* Estado cuando se scrollea */
+    header.header-scrolled {
+        background: rgb(255, 255, 255);
+        border: none;
+    }
+
+        header.header-scrolled nav ul a{
+            color: var(--negro);
+        }
 
 header .logo-container{
     display: flex;
 }
 
 header .logo-header{
-    height: 14vh;
+    height: 11.5vh;
+    margin-left: 2vh;
 }
 
 header ul {
