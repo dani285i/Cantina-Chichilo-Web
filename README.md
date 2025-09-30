@@ -31,8 +31,8 @@ La paleta de colores fue en base a los colores del local original, pero el tono 
 
 ## ¿A quién le pertenece este mojón de código?
 
-Diseño, Estructura de la Web y Programación: Daniel Gómez Aradas
-Programación, Ideas de colores, funcionalidades, transiciones y algunas secciones de la web: Samuel Pereira Marante
+- Diseño, Estructura de la Web y Programación: **Daniel Gómez Aradas**
+- Programación, Ideas de colores, funcionalidades, transiciones y algunas secciones de la web: **Samuel Pereira Marante**
 
 ---
 
