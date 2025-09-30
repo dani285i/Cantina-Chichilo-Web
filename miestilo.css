@@ -1,0 +1,354 @@
+:root {
+    --blanco: #fdfdfd;
+    --gris: #e5e5e5;
+    --rojo: #7b1e26; /* vino */
+    --verde: #004225; /* british racing green */
+    --negro: #111;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat';
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+/* MENU DE NAVEGACION */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(253,253,253, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 5vh;
+    z-index: 1000;
+    border-bottom: 1px solid var(--gris);
+}
+
+header .logo-container{
+    display: flex;
+}
+
+header .logo-header{
+    height: 14vh;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 5vw;
+    margin-right: 10vw;
+    padding: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    color: var(--rojo);
+}
+
+/* main LAYOUT */
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--blanco);
+    position: relative;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.55);
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+
+.main h2 {
+    font-family: 'Montserrat';
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.main p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: var(--rojo);
+    padding: 12px 25px;
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--verde);
+}
+
+/* MENU */
+.menu {
+    padding: 80px 50px;
+    text-align: center;
+    background: var(--blanco);
+}
+
+#menu-main-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.menu h2 {
+    font-family: 'Montserrat';
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--verde);
+}
+
+.-carta-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.carta {
+    background: var(--gris);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carta h3 {
+    margin: 20px 0 10px;
+    font-size: 1.4rem;
+    color: var(--rojo);
+}
+
+.carta p {
+    padding: 0 20px 20px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.carta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ------------- CARTA COMPLETA (DESPLEGABLE) ------------------ */
+.carta-completa {
+    padding: 100px 50px;
+    background: var(--gris);
+    text-align: center;
+}
+
+.carta-completa h2 {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 40px;
+}
+
+.desplegable {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.desplegable-item {
+    border: 1px solid var(--verde);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background: var(--blanco);
+}
+
+.desplegable-header {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: var(--verde);
+    color: var(--blanco);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.desplegable-header:hover {
+    background: var(--rojo);
+}
+
+.desplegable-body {
+    display: none;
+    padding: 15px 20px;
+    color: #444;
+    background: var(--blanco);
+}
+
+/* ---------------- EVENTOS -------------- */
+.eventos {
+    padding: 100px 50px;
+    text-align: center;
+    background: var(--blanco);
+}
+
+.eventos h2 {
+    font-size: 2.5rem;
+    color: var(--rojo);
+    margin-bottom: 40px;
+}
+
+.eventos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.evento {
+    background: var(--gris);
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.evento h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--verde);
+}
+
+.evento p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.evento:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* --------------- RESERVAS ------------- */
+.reservas {
+    padding: 100px 50px;
+    background: var(--gris);
+    text-align: center;
+}
+
+.reservas h2 {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 40px;
+}
+
+.form-reserva {
+    display: grid;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-reserva input,
+.form-reserva button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-reserva input:focus {
+    outline: none;
+    border-color: var(--rojo);
+}
+
+.form-reserva button {
+    background: var(--rojo);
+    color: var(--blanco);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-reserva button:hover {
+    background: var(--verde);
+}
+
+/* ------------- CONTACTO ------------- */
+.contacto {
+    padding: 100px 50px;
+    text-align: center;
+    background: var(--blanco);
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    color: var(--rojo);
+    margin-bottom: 30px;
+}
+
+.contacto p,
+.contacto ul {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ----------------- FOOTER ----------------- */
+footer {
+    background: var(--verde);
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--blanco);
+}
+
+footer .info {
+    margin-bottom: 15px;
+}
+
+footer .socials a img {
+    width: 28px;
+    margin: 0 8px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
