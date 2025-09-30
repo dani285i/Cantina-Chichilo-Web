@@ -31,7 +31,7 @@ header {
     /* Clases especiales para el script de despliegue del menú */
 
     header.header-on-top {
-        background: rgba(75, 75, 75, 0.2);
+        background: linear-gradient(rgba(60, 60, 60, 0.734), #e6646400);
         border: none;
     }
 
