@@ -379,3 +379,71 @@ footer p {
     font-size: 0.9rem;
     margin-top: 10px;
 }
+
+/* -------------------- BLOG -------------------- */
+
+/* Título del blog */
+.blog-main {
+    text-align: center;
+    padding: 17vh 5vw 5vh;
+    background-color: var(--gris);
+}
+
+.blog-main h1 {
+    -size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Contenedor en GRID */
+.blog-container {
+    display: grid; /* ✅ Uso de Grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 5vh 5vw;
+}
+
+.entrada {
+    background: var(--blanco);
+    border: 1px solid var(--gris);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.entrada img {
+    width: 100%;
+    height: auto;
+}
+
+.entrada h2 {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.entrada .fecha {
+    font-size: 0.9rem;
+    color: var(--gris);
+    margin: 0 1rem;
+}
+
+.entrada p {
+    margin: 1rem;
+    flex-grow: 1;
+}
+
+.entrada .btn {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--rojo);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.entrada .btn:hover {
+    background: var(--rojo);
+}
