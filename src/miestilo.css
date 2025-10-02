@@ -1,9 +1,10 @@
 :root {
-    --blanco: #fdfdfd;
-    --gris: #e5e5e5;
-    --rojo: #7b1e26; /* vino */
-    --verde: #004225; /* british racing green */
-    --negro: #111;
+    --blanco: #fdfdfd; /* Blanco */
+    --gris: #e5e5e5; /* Vainilla */
+    --gris-oscuro: #4b4b4b; /* gris oscuro */
+    --rojo: #7b1e26; /* Vino */
+    --verde: #004225; /* British Racing Green */
+    --negro: #151515; /* Negro */
 }
 
 body {
@@ -108,12 +109,12 @@ header ul li a.active {
 
 .main h2 {
     font-family: 'Montserrat';
-    font-size: 3rem;
+    font-size: 36pt;
     margin-bottom: 15px;
 }
 
 .main p {
-    font-size: 1.2rem;
+    font-size: 14pt;
     margin-bottom: 25px;
 }
 
@@ -151,7 +152,7 @@ header ul li a.active {
 
 .menu h2 {
     font-family: 'Montserrat';
-    font-size: 2.5rem;
+    font-size: 40pt;
     margin-bottom: 50px;
     color: var(--verde);
 }
@@ -177,14 +178,14 @@ header ul li a.active {
 
 .carta h3 {
     margin: 20px 0 10px;
-    font-size: 1.4rem;
+    font-size: 20pt;
     color: var(--rojo);
 }
 
 .carta p {
     padding: 0 20px 20px;
-    font-size: 0.95rem;
-    color: #444;
+    font-size: 13pt;
+    color: var(--gris-oscuro);
 }
 
 .carta:hover {
@@ -240,7 +241,7 @@ header ul li a.active {
 .desplegable-body {
     display: none;
     padding: 15px 20px;
-    color: #444;
+    color: var(--gris-oscuro);
     background: var(--blanco);
 }
 
@@ -278,7 +279,7 @@ header ul li a.active {
 
 .evento p {
     font-size: 1rem;
-    color: #333;
+    color: var(--gris-oscuro);
 }
 
 .evento:hover {
@@ -348,7 +349,7 @@ header ul li a.active {
 .contacto ul {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--gris-oscuro);
 }
 
 .contacto ul {
@@ -455,8 +456,9 @@ footer p {
     background-color: var(--blanco);
 }
 
+/* Uso de Grid */
 .sobre-nosotros-container {
-    display: grid; /* ✅ Uso de Grid */
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;

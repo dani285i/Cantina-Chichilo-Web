@@ -1,5 +1,6 @@
 blanco: #fdfdfd; /* Special White */
 gris: #e5e5e5; /* Vainilla */
+gris oscuro: #4b4b4b; /* Gris oscuro */
 rojo: #7b1e26; /* Vino */
 verde: #004225; /* British racing green */
 negro: #111; /* Black */
