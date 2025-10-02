@@ -201,7 +201,7 @@ header ul li a.active {
 }
 
 .carta-completa h2 {
-    font-size: 2.5rem;
+    font-size: 30pt;
     color: var(--verde);
     margin-bottom: 40px;
 }
@@ -223,7 +223,7 @@ header ul li a.active {
 .desplegable-header {
     width: 100%;
     padding: 15px 20px;
-    font-size: 1.2rem;
+    font-size: 13pt;
     font-weight: bold;
     background: var(--verde);
     color: var(--blanco);
@@ -253,7 +253,7 @@ header ul li a.active {
 }
 
 .eventos h2 {
-    font-size: 2.5rem;
+    font-size: 32pt;
     color: var(--rojo);
     margin-bottom: 40px;
 }
@@ -272,13 +272,13 @@ header ul li a.active {
 }
 
 .evento h3 {
-    font-size: 1.5rem;
+    font-size: 18pt;
     margin-bottom: 15px;
     color: var(--verde);
 }
 
 .evento p {
-    font-size: 1rem;
+    font-size: 12pt;
     color: var(--gris-oscuro);
 }
 
@@ -295,7 +295,7 @@ header ul li a.active {
 }
 
 .reservas h2 {
-    font-size: 2.5rem;
+    font-size: 32pt;
     color: var(--verde);
     margin-bottom: 40px;
 }
@@ -310,7 +310,7 @@ header ul li a.active {
 .form-reserva input,
 .form-reserva button {
     padding: 12px;
-    font-size: 1rem;
+    font-size: 12pt;
     border-radius: 8px;
     border: 1px solid #ccc;
 }
@@ -340,14 +340,14 @@ header ul li a.active {
 }
 
 .contacto h2 {
-    font-size: 2.5rem;
+    font-size: 32pt;
     color: var(--rojo);
     margin-bottom: 30px;
 }
 
 .contacto p,
 .contacto ul {
-    font-size: 1rem;
+    font-size: 12pt;
     margin-bottom: 10px;
     color: var(--gris-oscuro);
 }
@@ -377,7 +377,7 @@ footer .socials a img {
 }
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 12pt;
     margin-top: 10px;
 }
 
@@ -391,15 +391,16 @@ footer p {
 }
 
 .blog-main h1 {
-    -size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1vh;
 }
 
 /* Contenedor en GRID */
+
+/* Uso de Grid */
 .blog-container {
-    display: grid; /* ✅ Uso de Grid */
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 4vh;
     padding: 5vh 5vw;
 }
 
@@ -419,24 +420,24 @@ footer p {
 }
 
 .entrada h2 {
-    font-size: 1.5rem;
-    margin: 1rem;
+    font-size: 15pt;
+    margin: 2vh;
 }
 
 .entrada .fecha {
-    font-size: 0.9rem;
-    color: var(--gris);
-    margin: 0 1rem;
+    font-size: 12pt;
+    color: var(--gris-oscuro);
+    margin: 0 1.2vw;
 }
 
 .entrada p {
-    margin: 1rem;
+    margin: 1.5vw;
     flex-grow: 1;
 }
 
 .entrada .btn {
-    margin: 1rem;
-    padding: 0.5rem 1rem;
+    margin: 4vh;
+    padding: 1.5vh 1vw;
     background: var(--rojo);
     color: var(--blanco);
     text-decoration: none;
@@ -460,7 +461,7 @@ footer p {
 .sobre-nosotros-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 8vw;
     align-items: center;
 }
 
@@ -471,14 +472,14 @@ footer p {
 }
 
 .sobre-nosotros-text h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 32pt;
+    margin-bottom: 1vh;
 }
 
 .sobre-nosotros-text p {
-    font-size: 1.1rem;
+    font-size: 13pt;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: 1vh;
 }
 
 /* Responsive: en un móvil se apila */
@@ -491,6 +492,6 @@ footer p {
     }
 
     .sobre-nosotros-text {
-        margin-top: 2rem;
+        margin-top: 1vh;
     }
 }
