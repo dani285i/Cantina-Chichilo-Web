@@ -1,3 +1,8 @@
+
+/* ===========================================================
+   VARIABLES GLOBALES
+   Definición de colores principales para toda la página
+   =========================================================== */
 :root {
     --blanco: #fdfdfd; /* Blanco */
     --gris: #e5e5e5; /* Vainilla */
@@ -7,6 +12,10 @@
     --negro: #151515; /* Negro */
 }
 
+/* ===========================================================
+   BODY
+   Ajustes básicos: sin márgenes, tipografía y colores base
+   =========================================================== */
 body {
     margin: 0;
     font-family: 'Montserrat';
@@ -14,7 +23,10 @@ body {
     color: var(--negro);
 }
 
-/* HEADER */
+/* ===========================================================
+   HEADER
+   Header fijo con transición y menú de navegación
+   =========================================================== */
 header {
     position: fixed;
     top: 0;
@@ -29,31 +41,31 @@ header {
     border-bottom: 1px solid var(--gris);
 }
 
-    /* Clases especiales para el script de despliegue del menú */
+/* Clases especiales para el script de despliegue del menú */
+header.header-on-top {
+    background: linear-gradient(rgba(60, 60, 60, 0.734), #e6646400);
+    border: none;
+}
 
-    header.header-on-top {
-        background: linear-gradient(rgba(60, 60, 60, 0.734), #e6646400);
-        border: none;
-    }
+header.header-on-top nav ul a{
+    color: var(--blanco);
+}
 
-        header.header-on-top nav ul a{
-            color: var(--blanco);
-        }
+header.header-on-top nav ul a.active{
+    color: red;
+}
 
-        header.header-on-top nav ul a.active{
-            color: red;
-        }
+/* Estado cuando se scrollea */
+header.header-scrolled {
+    background: rgb(255, 255, 255);
+    border: none;
+}
 
-    /* Estado cuando se scrollea */
-    header.header-scrolled {
-        background: rgb(255, 255, 255);
-        border: none;
-    }
+header.header-scrolled nav ul a{
+    color: var(--negro);
+}
 
-        header.header-scrolled nav ul a{
-            color: var(--negro);
-        }
-
+/* Logo y contenedor del header */
 header .logo-container{
     display: flex;
 }
@@ -63,6 +75,7 @@ header .logo-header{
     margin-left: 2vh;
 }
 
+/* Estilo del menú de navegación */
 header ul {
     list-style: none;
     display: flex;
@@ -83,7 +96,10 @@ header ul li a.active {
     color: var(--rojo);
 }
 
-/* main LAYOUT */
+/* ===========================================================
+   MAIN
+   Sección principal centrada, con overlay y contenido encima
+   =========================================================== */
 .main {
     height: 100vh;
     display: flex;
@@ -118,6 +134,7 @@ header ul li a.active {
     margin-bottom: 25px;
 }
 
+/* Botones principales */
 .btn {
     background: var(--rojo);
     padding: 12px 25px;
@@ -132,7 +149,10 @@ header ul li a.active {
     background: var(--verde);
 }
 
-/* MENU */
+/* ===========================================================
+   MENU
+   Grid de cartas para mostrar productos o secciones del menú
+   =========================================================== */
 .menu {
     padding: 80px 50px;
     text-align: center;
@@ -193,7 +213,10 @@ header ul li a.active {
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* ------------- CARTA COMPLETA (DESPLEGABLE) ------------------ */
+/* ===========================================================
+   CARTA COMPLETA (DESPLEGABLE)
+   Acordeón para mostrar contenido detallado
+   =========================================================== */
 .carta-completa {
     padding: 100px 50px;
     background: var(--gris);
@@ -245,7 +268,10 @@ header ul li a.active {
     background: var(--blanco);
 }
 
-/* ---------------- EVENTOS -------------- */
+/* ===========================================================
+   EVENTOS
+   Tarjetas de eventos con grid y efecto hover
+   =========================================================== */
 .eventos {
     padding: 100px 50px;
     text-align: center;
@@ -287,7 +313,10 @@ header ul li a.active {
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* --------------- RESERVAS ------------- */
+/* ===========================================================
+   RESERVAS
+   Formulario centrado con estilos de inputs y botones
+   =========================================================== */
 .reservas {
     padding: 100px 50px;
     background: var(--gris);
@@ -332,7 +361,10 @@ header ul li a.active {
     background: var(--verde);
 }
 
-/* ------------- CONTACTO ------------- */
+/* ===========================================================
+   CONTACTO
+   Información de contacto y listas sin estilo predeterminado
+   =========================================================== */
 .contacto {
     padding: 100px 50px;
     text-align: center;
@@ -357,7 +389,10 @@ header ul li a.active {
     padding: 0;
 }
 
-/* ----------------- FOOTER ----------------- */
+/* ===========================================================
+   FOOTER
+   Fondo verde oscuro, texto blanco y redes sociales
+   =========================================================== */
 footer {
     background: var(--verde);
     text-align: center;
@@ -381,9 +416,10 @@ footer p {
     margin-top: 10px;
 }
 
-/* -------------------- BLOG -------------------- */
-
-/* Título del blog */
+/* ===========================================================
+   BLOG
+   Contenedor en grid para entradas de blog
+   =========================================================== */
 .blog-main {
     text-align: center;
     padding: 17vh 5vw 5vh;
@@ -394,9 +430,6 @@ footer p {
     margin-bottom: 1vh;
 }
 
-/* Contenedor en GRID */
-
-/* Uso de Grid */
 .blog-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -412,45 +445,8 @@ footer p {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-}
 
-.entrada img {
-    width: 100%;
-    height: auto;
-}
-
-.entrada h2 {
-    font-size: 15pt;
-    margin: 2vh;
-}
-
-.entrada .fecha {
-    font-size: 12pt;
-    color: var(--gris-oscuro);
-    margin: 0 1.2vw;
-}
-
-.entrada p {
-    margin: 1.5vw;
-    flex-grow: 1;
-}
-
-.entrada .btn {
-    margin: 4vh;
-    padding: 1.5vh 1vw;
-    background: var(--rojo);
-    color: var(--blanco);
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background 0.3s;
-}
-
-.entrada .btn:hover {
-    background: var(--rojo);
-}
-
-/* -------------------- Sobre Nosotros-------------------- */
+    /* -------------------- Sobre Nosotros-------------------- */
 
 .sobre-nosotros {
     padding: 21.55vh 5vw;

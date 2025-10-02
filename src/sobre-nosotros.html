@@ -1,9 +1,12 @@
-<!DOCTYPE html>
 
 <html lang="es">
 
 <head>
-
+    <!-- CABECERA DEL DOCUMENTO
+    - Se define idioma, codificación y diseño responsive
+    - Título de la pestaña
+    - Enlace a hoja de estilos y favicon
+    - Importación de fuentes de Google-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante Chichilo</title>
@@ -14,55 +17,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER
+    - Logo con enlace a la página de inicio
+    - Menú de navegación con enlaces principales-->
     <header>
         <div class="logo-container">
             <a href="index.html"><img src="../IMG/logo-header.png" alt="Logo Cantina Chichilo" class="logo-header" /></a>
         </div>
         <nav>
             <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="./sobre-nosotros.html" class="active">Sobre Nosotros</a></li>
-            <li><a href="./blog.html">Blog</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./sobre-nosotros.html" class="active">Sobre Nosotros</a></li>
+                <li><a href="./blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- SOBRE NOSOTROS -->
+    <!-- SECCIÓN SOBRE NOSOTROS 
+    - Presentación de la historia del restaurante
+    - Imagen ilustrativa + texto descriptivo-->
     <section id="sobre-nosotros" class="sobre-nosotros">
-
         <div class="sobre-nosotros-container">
 
+            <!-- Imagen destacada -->
             <div class="sobre-nosotros-img">
                 <img src="../IMG/familia-chichilo.png" alt="Cantina Chichilo - Tradición familiar" />
             </div>
 
+            <!-- Texto descriptivo -->
             <div class="sobre-nosotros-text">
-
-            <h2>Sobre Nosotros</h2>
-            <p>
-                En <strong>Cantina Chichilo</strong> llevamos más de 60 años compartiendo la auténtica 
-                cocina porteña con un toque familiar. Nuestro compromiso es ofrecer 
-                platos caseros de calidad, preparados con los mejores ingredientes 
-                y mucho cariño.
-            </p>
-            <p>
-                Ven a conocernos y descubre por qué somos un clásico de Buenos Aires. 
-                Aquí la tradición y el sabor se encuentran en cada plato.
-            </p>
-
+                <h2>Sobre Nosotros</h2>
+                <p>
+                    En <strong>Cantina Chichilo</strong> llevamos más de 60 años compartiendo la auténtica 
+                    cocina porteña con un toque familiar. Nuestro compromiso es ofrecer 
+                    platos caseros de calidad, preparados con los mejores ingredientes 
+                    y mucho cariño.
+                </p>
+                <p>
+                    Ven a conocernos y descubre por qué somos un clásico de Buenos Aires. 
+                    Aquí la tradición y el sabor se encuentran en cada plato.
+                </p>
             </div>
 
         </div>
-        
     </section>
 
-<!-- FOOTER -->
+    <!-- FOOTER
+    - Iconos de redes sociales
+    - Texto de derechos reservados -->
     <footer>
         <div class="socials">
             <a href="https://www.facebook.com/p/cantinachichilo-100063556502170/?locale=es_ES" target="_blank"><img src="../IMG/Logo-Facebook.png" alt="Facebook"></a>
@@ -73,5 +79,4 @@
     </footer>
 
 </body>
-
 </html>
