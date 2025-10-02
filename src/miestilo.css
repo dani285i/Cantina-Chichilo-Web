@@ -447,3 +447,48 @@ footer p {
 .entrada .btn:hover {
     background: var(--rojo);
 }
+
+/* -------------------- Sobre Nosotros-------------------- */
+
+.sobre-nosotros {
+    padding: 21.55vh 5vw;
+    background-color: var(--blanco);
+}
+
+.sobre-nosotros-container {
+    display: grid; /* ✅ Uso de Grid */
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sobre-nosotros-img img {
+    width: 100%;;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.sobre-nosotros-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-nosotros-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Responsive: en un móvil se apila */
+@media (max-width: 768px) 
+{
+    .sobre-nosotros-container 
+    {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .sobre-nosotros-text {
+        margin-top: 2rem;
+    }
+}
