@@ -1,9 +1,13 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-
+    <!-- CABECERA DEL DOCUMENTO 
+    - Se define el tipo de documento (HTML5)
+    - Se configura idioma, codificación y diseño responsive
+    - Se incluye el título de la página
+    - Enlaces a hoja de estilos, favicon y fuentes de Google-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante Chichilo</title>
@@ -14,31 +18,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER
+    - Logo con enlace a inicio
+    - Menú de navegación con secciones internas y externas-->
     <header>
         <div class="logo-container">
             <a href="index.html"><img src="../IMG/logo-header.png" alt="Logo Cantina Chichilo" class="logo-header" /></a>
         </div>
         <nav>
             <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="#menu">Menú</a></li>
-            <li><a href="#carta">Carta</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#reservas">Reservas</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="./sobre-nosotros.html">Sobre Nosotros</a></li>
-            <li><a href="./blog.html">Blog</a></li>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#carta">Carta</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="./sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="./blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO LAYOUT -->
+    <!-- HERO / SECCIÓN PRINCIPAL
+    - Presentación visual con video de fondo
+    - Mensaje central de bienvenida con botón hacia el menú-->
     <section class="main">
         <div class="main-content">
             <h2>Alta Cocina Argentina</h2>
@@ -50,87 +57,99 @@
         </video>
     </section>
 
-    <!-- MENÚ DESTACADO -->
+    <!-- MENÚ DESTACADO
+    - Sección de platos principales destacados en formato de tarjetas-->
     <section id="menu" class="menu">
         <h2>Platos Destacados</h2>
         <div class="carta-container">
             <div class="carta">
-            <img src="../IMG/chuleton-argentino.png" alt="Bife de Chorizo">
-            <h3>Ojo de bife</h3>
-            <p>Corte premium de res argentina, acompañado de salsa barbacoa de la casa.</p>
+                <img src="../IMG/chuleton-argentino.png" alt="Bife de Chorizo">
+                <h3>Ojo de bife</h3>
+                <p>Corte premium de res argentina, acompañado de salsa barbacoa de la casa.</p>
             </div>
             <div class="carta">
-            <img src="../IMG/empanadas-argentinas.png" alt="Empanadas Argentinas">
-            <h3>Empanadas</h3>
-            <p>Tradicionales con relleno de carne y especias de la Patagonia.</p>
+                <img src="../IMG/empanadas-argentinas.png" alt="Empanadas Argentinas">
+                <h3>Empanadas</h3>
+                <p>Tradicionales con relleno de carne y especias de la Patagonia.</p>
             </div>
             <div class="carta">
-            <img src="../IMG/trampantojo-trufa.png" alt="Trampantojo y Pana Cotta">
-            <h3>Trampantojo de Trufa</h3>
-            <p>Selección de frutos secos de altísima calidad, directamente de Mendoza.</p>
+                <img src="../IMG/trampantojo-trufa.png" alt="Trampantojo y Pana Cotta">
+                <h3>Trampantojo de Trufa</h3>
+                <p>Selección de frutos secos de altísima calidad, directamente de Mendoza.</p>
             </div>
         </div>
     </section>
 
-    <!-- CARTA COMPLETA -->
+    <!-- CARTA COMPLETA
+    - Carta desplegable con entradas, principales, postres y vinos-->
     <section id="carta" class="carta-completa">
         <h2>Nuestra Carta</h2>
         <div class="desplegable">
+
+            <!-- Entradas -->
             <div class="desplegable-item">
-            <button class="desplegable-header">Entradas</button>
-            <div class="desplegable-body">
-                <p>Carpaccio de res con rúcula y parmesano</p>
-                <p>Empanadas criollas con carne cortada a cuchillo</p>
-                <p>Provoleta con tomates confitados</p>
+                <button class="desplegable-header">Entradas</button>
+                <div class="desplegable-body">
+                    <p>Carpaccio de res con rúcula y parmesano</p>
+                    <p>Empanadas criollas con carne cortada a cuchillo</p>
+                    <p>Provoleta con tomates confitados</p>
+                </div>
             </div>
-            </div>
+
+            <!-- Platos principales -->
             <div class="desplegable-item">
-            <button class="desplegable-header">Platos Principales</button>
-            <div class="desplegable-body">
-                <p>Bife de chorizo a la parrilla con papas rústicas</p>
-                <p>Asado de tira braseado a fuego lento</p>
-                <p>Pescado fresco con salsa de vino blanco</p>
+                <button class="desplegable-header">Platos Principales</button>
+                <div class="desplegable-body">
+                    <p>Bife de chorizo a la parrilla con papas rústicas</p>
+                    <p>Asado de tira braseado a fuego lento</p>
+                    <p>Pescado fresco con salsa de vino blanco</p>
+                </div>
             </div>
-            </div>
+
+            <!-- Postres -->
             <div class="desplegable-item">
-            <button class="desplegable-header">Postres</button>
-            <div class="desplegable-body">
-                <p>Flan casero con dulce de leche artesanal</p>
-                <p>Helado de yerba mate</p>
-                <p>Chocotorta gourmet</p>
+                <button class="desplegable-header">Postres</button>
+                <div class="desplegable-body">
+                    <p>Flan casero con dulce de leche artesanal</p>
+                    <p>Helado de yerba mate</p>
+                    <p>Chocotorta gourmet</p>
+                </div>
             </div>
-            </div>
+
+            <!-- Vinos -->
             <div class="desplegable-item">
-            <button class="desplegable-header">Vinos</button>
-            <div class="desplegable-body">
-                <p>Malbec Gran Reserva - Mendoza</p>
-                <p>Cabernet Sauvignon - Patagonia</p>
-                <p>Torrontés - Salta</p>
-            </div>
+                <button class="desplegable-header">Vinos</button>
+                <div class="desplegable-body">
+                    <p>Malbec Gran Reserva - Mendoza</p>
+                    <p>Cabernet Sauvignon - Patagonia</p>
+                    <p>Torrontés - Salta</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- EVENTOS -->
+    <!-- EVENTOS
+    - Presentación de eventos especiales del restaurante-->
     <section id="eventos" class="eventos">
         <h2>Eventos Exclusivos</h2>
         <div class="eventos-container">
             <div class="evento">
-            <h3>Cata de Vinos</h3>
-            <p>Degustación de etiquetas premium con nuestro sommelier.</p>
+                <h3>Cata de Vinos</h3>
+                <p>Degustación de etiquetas premium con nuestro sommelier.</p>
             </div>
             <div class="evento">
-            <h3>Noche de Tango</h3>
-            <p>Experiencia gastronómica acompañada de tango en vivo.</p>
+                <h3>Noche de Tango</h3>
+                <p>Experiencia gastronómica acompañada de tango en vivo.</p>
             </div>
             <div class="evento">
-            <h3>Cenas Privadas</h3>
-            <p>Salón exclusivo para eventos corporativos o familiares.</p>
+                <h3>Cenas Privadas</h3>
+                <p>Salón exclusivo para eventos corporativos o familiares.</p>
             </div>
         </div>
     </section>
 
-    <!-- RESERVAS (FORMULARIO) -->
+    <!-- RESERVAS
+    - Formulario para reservar mesa con validaciones básicas-->
     <section id="reservas" class="reservas">
         <h2>Reserva tu Mesa</h2>
         <form class="form-reserva">
@@ -143,7 +162,8 @@
         </form>
     </section>
 
-    <!-- CONTACTO -->
+    <!-- CONTACTO
+    - Información de contacto, dirección, horarios de apertura-->
     <section id="contacto" class="contacto">
         <h2>Contacto & Horarios</h2>
         <p><strong>Dirección:</strong> Camarones 1901, C1416 Cdad. Autónoma de Buenos Aires, Argentina</p>
@@ -157,7 +177,8 @@
         </ul>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER 
+    - Redes sociales con iconos y derechos reservados-->
     <footer>
         <div class="socials">
             <a href="https://www.facebook.com/p/cantinachichilo-100063556502170/?locale=es_ES" target="_blank"><img src="../IMG/Logo-Facebook.png" alt="Facebook"></a>
@@ -167,47 +188,41 @@
         <p>&copy; 2025 Restaurante Cantina Chichilo | Todos los derechos reservados</p>
     </footer>
 
+    <!--  SCRIPTS 
+    - Desplegables de la carta
+    - Efecto del header al hacer scroll (ocultarse y cambiar estilo)-->
     <script>
-
         // ------ Script básico para los desplegables de la carta ---------
-
         document.querySelectorAll('.desplegable-header').forEach(btn => {
             btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            const body = btn.nextElementSibling;
-            body.style.display = body.style.display === 'block' ? 'none' : 'block';
+                btn.classList.toggle('active');
+                const body = btn.nextElementSibling;
+                body.style.display = body.style.display === 'block' ? 'none' : 'block';
             });
         });
 
-        // ------- Script sacado de mi pagina de lexus para que el header cambie de color dependiendo de su posicion en la web --------
-
+        // ------ Script para el comportamiento del header según scroll ------
         let ubicacionAnterior = window.pageYOffset;
         let scrollThreshold = 10; 
         const header = document.querySelector("header");
 
-        window.addEventListener("scroll", () => 
-        {
+        window.addEventListener("scroll", () => {
             let ubicacionActual = window.pageYOffset;  
 
-            // Si scrolleas hacia abajo, el menu sube y ya no lo ves
-            if (ubicacionActual > ubicacionAnterior) 
-            {  
+            // Si scrolleas hacia abajo, el menú desaparece
+            if (ubicacionActual > ubicacionAnterior) {  
                 header.style.top = "-17vh";  
             } 
-            // Si subes, el menu vuelve a aparecer
-            else if (ubicacionAnterior - ubicacionActual > scrollThreshold) 
-            {  
+            // Si subes, el menú reaparece
+            else if (ubicacionAnterior - ubicacionActual > scrollThreshold) {  
                 header.style.top = "0";  
             }  
 
-            // Aqui es donde defines cada clase del css especializada dependiendo de la posicion del menu
-            if (ubicacionActual === 0) 
-            {
+            // Cambio de clase según posición del scroll
+            if (ubicacionActual === 0) {
                 header.classList.add("header-on-top");
                 header.classList.remove("header-scrolled");
-
-            } else 
-            {
+            } else {
                 header.classList.add("header-scrolled");
                 header.classList.remove("header-on-top");
             }
@@ -216,9 +231,7 @@
         });
 
         /*Javascript Realizado por Daniel Gómez Aradas*/
-
     </script>
 
 </body>
-
 </html>
