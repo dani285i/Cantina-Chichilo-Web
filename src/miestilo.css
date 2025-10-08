@@ -84,7 +84,7 @@ header ul li a.active {
 }
 
 /* main LAYOUT */
-.main {
+main {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -94,7 +94,7 @@ header ul li a.active {
     position: relative;
 }
 
-.main::before {
+main::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -107,13 +107,13 @@ header ul li a.active {
     z-index: 1;
 }
 
-.main h2 {
+main h2 {
     font-family: 'Montserrat';
     font-size: 36pt;
     margin-bottom: 15px;
 }
 
-.main p {
+main p {
     font-size: 14pt;
     margin-bottom: 25px;
 }
@@ -157,7 +157,7 @@ header ul li a.active {
     color: var(--verde);
 }
 
-.-carta-container {
+.carta-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
@@ -385,7 +385,7 @@ footer p {
 /* -------------------- BLOG -------------------- */
 
 /* Título del blog */
-.blog-main {
+.blog-main-content {
     text-align: center;
     padding: 17vh 5vw 5vh;
     background-color: var(--gris);
@@ -483,9 +483,39 @@ footer p {
     margin-bottom: 1vh;
 }
 
-/* Responsive: en un móvil se apila */
+/* Responsive: en un móvil (se comprimen) */
 @media (max-width: 768px) 
 {
+    header nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 enlaces por fila */
+    grid-gap: 1rem;
+    justify-items: center;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    }
+
+    header nav ul li {
+        margin: 0;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    header .logo-header {
+        height: 10vh;
+        margin: 0;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
     .sobre-nosotros-container 
     {
         grid-template-columns: 1fr;
